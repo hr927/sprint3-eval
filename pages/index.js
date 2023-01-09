@@ -221,7 +221,7 @@ export default function Home({ user }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   let response = await fetch(`https://api.github.com/users/hr927`);
   let data = await response.json();
   return {
